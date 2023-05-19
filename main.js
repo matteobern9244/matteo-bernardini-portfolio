@@ -42,17 +42,17 @@ function addStar() {
 Array(200).fill().forEach(addStar);
 
 // Background
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load("/assets/img/space.jpg");
 scene.background = spaceTexture;
 
 // Avatar
-const matteoTexture = new THREE.TextureLoader().load('matteo.png');
+const matteoTexture = new THREE.TextureLoader().load("/assets/img/matteo.png");
 const matteo = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: matteoTexture }));
 scene.add(matteo);
 
 // Moon
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load("/assets/img/moon.jpg");
+const normalTexture = new THREE.TextureLoader().load("/assets/img/normal.jpg");
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
